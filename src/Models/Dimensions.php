@@ -4,10 +4,10 @@ namespace Aboodma\AramexIntegration\Models;
 
 class Dimensions
 {
-    private $length;
-    private $width;
-    private $height;
-    private $unit;
+    public $length;
+    public $width;
+    public $height;
+    public $unit;
 
     public function getLength()
     {

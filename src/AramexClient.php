@@ -21,15 +21,17 @@ class AramexClient
 
     public function createShipment(Shipment $shipment, LabelInfo $labelInfo, ClientInfo $clientInfo)
     {
+        
         $data = [
             'Shipments' => [$shipment],
             'LabelInfo' => $labelInfo,
             'ClientInfo' => $clientInfo,
             'Transaction' => null
         ];
-
-        // Log the request payload
+        
         file_put_contents('request_payload.log', json_encode($data, JSON_PRETTY_PRINT));
+        // die;
+        // Log the request payload
 
         try {
             $response = $this->client->post('https://ws.sbx.aramex.net/ShippingAPI.V2/Shipping/Service_1_0.svc/json/CreateShipments', [

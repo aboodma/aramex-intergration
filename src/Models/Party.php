@@ -4,11 +4,11 @@ namespace Aboodma\AramexIntegration\Models;
 
 class Party
 {
-    private $reference1;
-    private $reference2;
-    private $accountNumber;
-    private $partyAddress;
-    private $contact;
+    public $reference1;
+    public $reference2;
+    public $accountNumber;
+    public $partyAddress;
+    public $contact;
 
  
     public function getReference1()

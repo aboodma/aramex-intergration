@@ -4,27 +4,27 @@ namespace Aboodma\AramexIntegration\Models;
 
 class ShipmentDetails
 {
-    private $dimensions;
-    private $actualWeight;
-    private $chargeableWeight;
-    private $descriptionOfGoods;
-    private $goodsOriginCountry;
-    private $numberOfPieces;
-    private $productGroup;
-    private $productType;
-    private $paymentType;
-    private $paymentOptions;
-    private $customsValueAmount;
-    private $cashOnDeliveryAmount;
-    private $insuranceAmount;
-    private $cashAdditionalAmount;
-    private $cashAdditionalAmountDescription;
-    private $collectAmount;
-    private $services;
-    private $items;
-    private $deliveryInstructions;
-    private $additionalProperties;
-    private $containsDangerousGoods;
+    public $dimensions;
+    public $actualWeight;
+    public $chargeableWeight;
+    public $descriptionOfGoods;
+    public $goodsOriginCountry;
+    public $numberOfPieces;
+    public $productGroup;
+    public $productType;
+    public $paymentType;
+    public $paymentOptions;
+    public $customsValueAmount;
+    public $cashOnDeliveryAmount;
+    public $insuranceAmount;
+    public $cashAdditionalAmount;
+    public $cashAdditionalAmountDescription;
+    public $collectAmount;
+    public $services;
+    public $items;
+    public $deliveryInstructions;
+    public $additionalProperties;
+    public $containsDangerousGoods;
 
     /**
      * Constructor for initializing ShipmentDetails object with dimensions, actual weight, and chargeable weight.

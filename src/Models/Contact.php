@@ -3,18 +3,18 @@
 namespace Aboodma\AramexIntegration\Models;
 class Contact
 {
-    private $department;
-    private $personName;
-    private $title;
-    private $companyName;
-    private $phoneNumber1;
-    private $phoneNumber1Ext;
-    private $phoneNumber2;
-    private $phoneNumber2Ext;
-    private $faxNumber;
-    private $cellPhone;
-    private $emailAddress;
-    private $type;
+    public $department;
+    public $personName;
+    public $title;
+    public $companyName;
+    public $phoneNumber1;
+    public $phoneNumber1Ext;
+    public $phoneNumber2;
+    public $phoneNumber2Ext;
+    public $faxNumber;
+    public $cellPhone;
+    public $emailAddress;
+    public $type;
 
     public function getDepartment()
     {

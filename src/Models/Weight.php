@@ -4,8 +4,8 @@ namespace Aboodma\AramexIntegration\Models;
 
 class Weight
 {
-    private $unit;
-    private $value;
+    public $unit;
+    public $value;
 
     /**
      * @return mixed

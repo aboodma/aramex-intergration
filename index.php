@@ -31,6 +31,7 @@ $shipperContact->setEmailAddress("test@aramex.com");
 
 $shipper = new \Aboodma\AramexIntegration\Models\Party($shipperAddress, $shipperContact);
 $shipper->setReference1("Shipper Reference");
+$shipper->setAccountNumber("45796");
 
 $consigneeAddress = new \Aboodma\AramexIntegration\Models\Address();
 $consigneeAddress->setLine1("Test Consignee Address Line1");

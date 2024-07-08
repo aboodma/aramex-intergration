@@ -4,15 +4,15 @@ namespace Aboodma\AramexIntegration\Models;
 
 class ClientInfo
 {
-    private $userName;
-    private $password;
-    private $version;
-    private $accountNumber;
-    private $accountPin;
-    private $accountEntity;
-    private $accountCountryCode;
-    private $source;
-    private $preferredLanguageCode;
+    public $userName;
+    public $password;
+    public $version;
+    public $accountNumber;
+    public $accountPin;
+    public $accountEntity;
+    public $accountCountryCode;
+    public $source;
+    public $preferredLanguageCode;
 
     public function getUserName() { return $this->userName; }
     public function setUserName($userName) { $this->userName = $userName; }

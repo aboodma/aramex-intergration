@@ -1,8 +1,89 @@
 {
     "Shipments": [
-        {}
+        {
+            "reference1": "Shipment Reference",
+            "reference2": null,
+            "reference3": null,
+            "shipper": {
+                "reference1": "Shipper Reference",
+                "reference2": null,
+                "accountNumber": "45796",
+                "partyAddress": null,
+                "contact": null
+            },
+            "consignee": {
+                "reference1": null,
+                "reference2": null,
+                "accountNumber": null,
+                "partyAddress": null,
+                "contact": null
+            },
+            "thirdParty": null,
+            "shippingDateTime": null,
+            "dueDate": null,
+            "comments": null,
+            "pickupLocation": null,
+            "operationsInstructions": null,
+            "accountingInstructions": null,
+            "details": {
+                "dimensions": {
+                    "length": 0,
+                    "width": 0,
+                    "height": 0,
+                    "unit": "CM"
+                },
+                "actualWeight": {
+                    "unit": "KG",
+                    "value": 0.1
+                },
+                "chargeableWeight": {
+                    "unit": "KG",
+                    "value": 0
+                },
+                "descriptionOfGoods": "Items",
+                "goodsOriginCountry": "AE",
+                "numberOfPieces": 1,
+                "productGroup": "DOM",
+                "productType": "ONP",
+                "paymentType": "P",
+                "paymentOptions": "ACCT",
+                "customsValueAmount": {
+                    "value": 10,
+                    "currencyCode": "AED"
+                },
+                "cashOnDeliveryAmount": null,
+                "insuranceAmount": null,
+                "cashAdditionalAmount": null,
+                "cashAdditionalAmountDescription": null,
+                "collectAmount": null,
+                "services": null,
+                "items": null,
+                "deliveryInstructions": null,
+                "additionalProperties": null,
+                "containsDangerousGoods": null
+            },
+            "attachments": null,
+            "foreignHAWB": null,
+            "transportType": null,
+            "pickupGUID": null,
+            "number": null,
+            "scheduledDelivery": null
+        }
     ],
-    "LabelInfo": {},
-    "ClientInfo": {},
+    "LabelInfo": {
+        "reportID": 9729,
+        "reportType": "URL"
+    },
+    "ClientInfo": {
+        "userName": "testingapi@aramex.com",
+        "password": "R123456789$r",
+        "version": "v1.0",
+        "accountNumber": "45796",
+        "accountPin": "116216",
+        "accountEntity": "DXB",
+        "accountCountryCode": "AE",
+        "source": 24,
+        "preferredLanguageCode": null
+    },
     "Transaction": null
 }

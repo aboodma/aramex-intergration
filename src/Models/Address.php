@@ -4,21 +4,21 @@ namespace Aboodma\AramexIntegration\Models;
 
 class Address
 {
-    private $line1;
-    private $line2;
-    private $line3;
-    private $city;
-    private $stateOrProvinceCode;
-    private $postCode;
-    private $countryCode;
-    private $longitude;
-    private $latitude;
-    private $buildingNumber;
-    private $buildingName;
-    private $floor;
-    private $apartment;
-    private $poBox;
-    private $description;
+    public $line1;
+    public $line2;
+    public $line3;
+    public $city;
+    public $stateOrProvinceCode;
+    public $postCode;
+    public $countryCode;
+    public $longitude;
+    public $latitude;
+    public $buildingNumber;
+    public $buildingName;
+    public $floor;
+    public $apartment;
+    public $poBox;
+    public $description;
 
     public function getLine1()
     {

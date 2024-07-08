@@ -4,8 +4,8 @@ namespace Aboodma\AramexIntegration\Models;
 
 class Amount {
 
-    private $value;
-    private $currencyCode;
+    public $value;
+    public $currencyCode;
 
 
 

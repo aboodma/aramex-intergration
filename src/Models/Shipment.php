@@ -4,25 +4,25 @@ namespace Aboodma\AramexIntegration\Models;
 
 class Shipment
 {
-    private $reference1;
-    private $reference2;
-    private $reference3;
-    private $shipper;
-    private $consignee;
-    private $thirdParty;
-    private $shippingDateTime;
-    private $dueDate;
-    private $comments;
-    private $pickupLocation;
-    private $operationsInstructions;
-    private $accountingInstructions;
-    private $details;
-    private $attachments;
-    private $foreignHAWB;
-    private $transportType;
-    private $pickupGUID;
-    private $number;
-    private $scheduledDelivery;
+    public $reference1;
+    public $reference2;
+    public $reference3;
+    public $shipper;
+    public $consignee;
+    public $thirdParty;
+    public $shippingDateTime;
+    public $dueDate;
+    public $comments;
+    public $pickupLocation;
+    public $operationsInstructions;
+    public $accountingInstructions;
+    public ShipmentDetails $details;
+    public $attachments;
+    public $foreignHAWB;
+    public $transportType;
+    public $pickupGUID;
+    public $number;
+    public $scheduledDelivery;
 
     /**
      * Constructor for the Shipment class.

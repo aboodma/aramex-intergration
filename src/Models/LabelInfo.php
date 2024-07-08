@@ -4,8 +4,8 @@ namespace Aboodma\AramexIntegration\Models;
 
 class LabelInfo
 {
-    private $reportID;
-    private $reportType;
+    public $reportID;
+    public $reportType;
 
     public function getReportID()
     {
