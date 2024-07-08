@@ -1,6 +1,4 @@
 /vendor
 composer.lock
-request_payload.log
-response_payload.log
-error_response.log
-ref.json
+*.log
+*.json
