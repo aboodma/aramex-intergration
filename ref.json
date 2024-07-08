@@ -1,88 +1,88 @@
 {
     "Shipments": [
         {
-            "Reference1": "Shipment Reference",
-            "Reference2": null,
-            "Reference3": null,
+            "reference1": "Shipment Reference",
+            "reference2": null,
+            "reference3": null,
             "Shipper": {
-                "Reference1": "Shipper Reference -{{testname}}",
-                "Reference2": null,
-                "AccountNumber": "0",
+                "reference1": "Shipper Reference",
+                "reference2": null,
+                "AccountNumber": "45796",
                 "PartyAddress": {
-                    "Line1": "Test Shipper Address Line1{{testname}}",
-                    "Line2": "Test Shipper Address Line2{{testname}}",
-                    "Line3": "",
+                    "Line1": "Test Shipper Address Line1",
+                    "Line2": "Test Shipper Address Line2",
+                    "Line3": null,
                     "City": "Dubai",
-                    "StateOrProvinceCode": "",
+                    "StateOrProvinceCode": null,
                     "PostCode": "000000",
                     "CountryCode": "AE",
-                    "Longitude": 0,
-                    "Latitude": 0,
-                    "BuildingNumber": null,
-                    "BuildingName": null,
-                    "Floor": null,
-                    "Apartment": null,
-                    "POBox": null,
-                    "Description": null
+                    "longitude": null,
+                    "latitude": null,
+                    "buildingNumber": null,
+                    "buildingName": null,
+                    "floor": null,
+                    "apartment": null,
+                    "poBox": null,
+                    "description": null
                 },
                 "Contact": {
-                    "Department": null,
+                    "department": null,
                     "PersonName": "Test Shipper Name",
                     "Title": null,
-                    "CompanyName": "Test Shipper Name/Test Shipper Company Name",
+                    "CompanyName": "Test Shipper Company Name",
                     "PhoneNumber1": "048707766",
-                    "PhoneNumber1Ext": "",
-                    "PhoneNumber2": "",
-                    "PhoneNumber2Ext": "",
-                    "FaxNumber": null,
+                    "phoneNumber1Ext": null,
+                    "PhoneNumber2": null,
+                    "phoneNumber2Ext": null,
+                    "faxNumber": null,
                     "CellPhone": "971556893100",
-                    "EmailAddress": "test@aramex.com",
-                    "Type": ""
+                    "emailAddress": "test@aramex.com",
+                    "Type": null
                 }
             },
             "Consignee": {
-                "Reference1": null,
-                "Reference2": null,
-                "AccountNumber": null,
+                "reference1": null,
+                "reference2": null,
+                "AccountNumber": "0",
                 "PartyAddress": {
                     "Line1": "Test Consignee Address Line1",
                     "Line2": "Test Consignee Address Line2",
                     "Line3": "Test Consignee Address Line3",
                     "City": "Dubai",
                     "StateOrProvinceCode": "FU",
-                    "PostCode": "",
+                    "PostCode": null,
                     "CountryCode": "AE",
-                    "Longitude": 0,
-                    "Latitude": 0,
-                    "BuildingNumber": null,
-                    "BuildingName": null,
-                    "Floor": null,
-                    "Apartment": null,
-                    "POBox": null,
-                    "Description": null
+                    "longitude": null,
+                    "latitude": null,
+                    "buildingNumber": null,
+                    "buildingName": null,
+                    "floor": null,
+                    "apartment": null,
+                    "poBox": null,
+                    "description": null
                 },
                 "Contact": {
-                    "Department": null,
+                    "department": null,
                     "PersonName": "Test Consignee Name",
                     "Title": null,
-                    "CompanyName": "Test Consignee/Company Name",
+                    "CompanyName": "Test Consignee Company Name",
                     "PhoneNumber1": "048707766",
-                    "PhoneNumber1Ext": "",
-                    "PhoneNumber2": "",
-                    "PhoneNumber2Ext": "",
-                    "FaxNumber": null,
+                    "phoneNumber1Ext": null,
+                    "PhoneNumber2": null,
+                    "phoneNumber2Ext": null,
+                    "faxNumber": null,
                     "CellPhone": "971556893100",
-                    "EmailAddress": "tets@hotmail.com",
-                    "Type": ""
+                    "emailAddress": "tets@hotmail.com",
+                    "Type": null
                 }
             },
-            "ThirdParty": null,
+            "thirdParty": null,
             "ShippingDateTime": "/Date({{current_timestamp}})/",
-            "DueDate": "/Date({{current_timestamp}})/",
-            "Comments": null,
-            "PickupLocation": null,
-            "OperationsInstructions": null,
-            "AccountingInstrcutions": null,
+            "dueDate": null,
+            "comments": null,
+            "pickupLocation": null,
+            "operationsInstructions": null,
+            "accountingInstructions": null,
             "Details": {
                 "Dimensions": {
                     "Length": 0,
@@ -105,56 +105,27 @@
                 "ProductType": "ONP",
                 "PaymentType": "P",
                 "PaymentOptions": "ACCT",
-                "CustomsValueAmount": {
-                    "CurrencyCode": "AED",
-                    "Value": 10
+                "customsValueAmount": {
+                    "value": 10,
+                    "currencyCode": "AED"
                 },
-                "CashOnDeliveryAmount": {
-                    "CurrencyCode": "AED",
-                    "Value": 0
-                },
-                "InsuranceAmount": {
-                    "CurrencyCode": "AED",
-                    "Value": 0
-                },
-                "CashAdditionalAmount": {
-                    "CurrencyCode": "AED",
-                    "Value": 0
-                },
-                "CashAdditionalAmountDescription": null,
-                "CollectAmount": {
-                    "CurrencyCode": "AED",
-                    "Value": 0
-                },
-                "Services": "",
-                "Items": [
-                    {
-                        "PackageType": "item",
-                        "Quantity": 1,
-                        "Weight": {
-                            "Unit": "CM",
-                            "Value": 0
-                        },
-                        "Comments": "no description",
-                        "Reference": "no barcode",
-                        "PiecesDimensions": null,
-                        "CommodityCode": null,
-                        "GoodsDescription": null,
-                        "CountryOfOrigin": null,
-                        "CustomsValue": null,
-                        "ContainerNumber": null
-                    }
-                ],
-                "DeliveryInstructions": null,
-                "AdditionalProperties": null,
-                "ContainsDangerousGoods": false
+                "cashOnDeliveryAmount": null,
+                "insuranceAmount": null,
+                "cashAdditionalAmount": null,
+                "cashAdditionalAmountDescription": null,
+                "collectAmount": null,
+                "services": null,
+                "items": null,
+                "deliveryInstructions": null,
+                "additionalProperties": null,
+                "containsDangerousGoods": null
             },
-            "Attachments": null,
-            "ForeignHAWB": null,
-            "TransportType ": 0,
-            "PickupGUID": null,
-            "Number": null,
-            "ScheduledDelivery": null
+            "attachments": null,
+            "foreignHAWB": null,
+            "transportType": null,
+            "pickupGUID": null,
+            "number": null,
+            "scheduledDelivery": null
         }
     ],
     "LabelInfo": {
@@ -169,8 +140,8 @@
         "AccountPin": "116216",
         "AccountEntity": "DXB",
         "AccountCountryCode": "AE",
-        "Source": 24,
-        "PreferredLanguageCode": null
+        "source": 24,
+        "preferredLanguageCode": null
     },
     "Transaction": null
 }

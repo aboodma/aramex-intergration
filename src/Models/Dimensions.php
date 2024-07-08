@@ -4,48 +4,96 @@ namespace Aboodma\AramexIntegration\Models;
 
 class Dimensions
 {
-    public $length;
-    public $width;
-    public $height;
-    public $unit;
+    public $Length;
+    public $Width;
+    public $Height;
+    public $Unit;
 
+    /**
+     * Retrieves the length.
+     *
+     * @return float The length.
+     */
     public function getLength()
     {
-        return $this->length;
+        return $this->Length;
     }
 
-    public function setLength($length)
+    /**
+     * Sets the length.
+     *
+     * @param float $Length The length to set.
+     * @return $this
+     */
+    public function setLength($Length)
     {
-        $this->length = $length;
+        $this->Length = $Length;
+        return $this;
     }
 
+    /**
+     * Retrieves the width.
+     *
+     * @return float The width.
+     */
     public function getWidth()
     {
-        return $this->width;
+        return $this->Width;
     }
 
-    public function setWidth($width)
+    /**
+     * Sets the width.
+     *
+     * @param float $Width The width to set.
+     * @return $this
+     */
+    public function setWidth($Width)
     {
-        $this->width = $width;
+        $this->Width = $Width;
+        return $this;
     }
 
+    /**
+     * Retrieves the height.
+     *
+     * @return float The height.
+     */
     public function getHeight()
     {
-        return $this->height;
+        return $this->Height;
     }
 
-    public function setHeight($height)
+    /**
+     * Sets the height.
+     *
+     * @param float $Height The height to set.
+     * @return $this
+     */
+    public function setHeight($Height)
     {
-        $this->height = $height;
+        $this->Height = $Height;
+        return $this;
     }
 
+    /**
+     * Retrieves the unit of measurement.
+     *
+     * @return string The unit of measurement.
+     */
     public function getUnit()
     {
-        return $this->unit;
+        return $this->Unit;
     }
 
-    public function setUnit($unit)
+    /**
+     * Sets the unit of measurement.
+     *
+     * @param string $Unit The unit of measurement to set.
+     * @return $this
+     */
+    public function setUnit($Unit)
     {
-        $this->unit = $unit;
+        $this->Unit = $Unit;
+        return $this;
     }
 }

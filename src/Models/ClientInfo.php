@@ -4,40 +4,193 @@ namespace Aboodma\AramexIntegration\Models;
 
 class ClientInfo
 {
-    public $userName;
-    public $password;
-    public $version;
-    public $accountNumber;
-    public $accountPin;
-    public $accountEntity;
-    public $accountCountryCode;
+    public $UserName;
+    public $Password;
+    public $Version;
+    public $AccountNumber;
+    public $AccountPin;
+    public $AccountEntity;
+    public $AccountCountryCode;
     public $source;
     public $preferredLanguageCode;
 
-    public function getUserName() { return $this->userName; }
-    public function setUserName($userName) { $this->userName = $userName; }
+    /**
+     * Retrieves the username.
+     *
+     * @return string The username.
+     */
+    public function getUserName() { 
+        return $this->UserName;
+    }
 
-    public function getPassword() { return $this->password; }
-    public function setPassword($password) { $this->password = $password; }
+    /**
+     * Sets the username.
+     *
+     * @param string $UserName The username to set.
+     * @return $this
+     */
+    public function setUserName($UserName) { 
+        $this->UserName = $UserName;
+        return $this;
+    }
 
-    public function getVersion() { return $this->version; }
-    public function setVersion($version) { $this->version = $version; }
+    /**
+     * Retrieves the password.
+     *
+     * @return string The password.
+     */
+    public function getPassword() { 
+        return $this->Password;
+    }
 
-    public function getAccountNumber() { return $this->accountNumber; }
-    public function setAccountNumber($accountNumber) { $this->accountNumber = $accountNumber; }
+    /**
+     * Sets the password.
+     *
+     * @param string $Password The password to set.
+     * @return $this
+     */
+    public function setPassword($Password) { 
+        $this->Password = $Password;
+        return $this;
+    }
 
-    public function getAccountPin() { return $this->accountPin; }
-    public function setAccountPin($accountPin) { $this->accountPin = $accountPin; }
+    /**
+     * Retrieves the version.
+     *
+     * @return string The version.
+     */
+    public function getVersion() { 
+        return $this->Version;
+    }
 
-    public function getAccountEntity() { return $this->accountEntity; }
-    public function setAccountEntity($accountEntity) { $this->accountEntity = $accountEntity; }
+    /**
+     * Sets the version.
+     *
+     * @param string $Version The version to set.
+     * @return $this
+     */
+    public function setVersion($Version) { 
+        $this->Version = $Version;
+        return $this;
+    }
 
-    public function getAccountCountryCode() { return $this->accountCountryCode; }
-    public function setAccountCountryCode($accountCountryCode) { $this->accountCountryCode = $accountCountryCode; }
+    /**
+     * Retrieves the account number.
+     *
+     * @return string The account number.
+     */
+    public function getAccountNumber() { 
+        return $this->AccountNumber;
+    }
 
-    public function getSource() { return $this->source; }
-    public function setSource($source) { $this->source = $source; }
+    /**
+     * Sets the account number.
+     *
+     * @param string $AccountNumber The account number to set.
+     * @return $this
+     */
+    public function setAccountNumber($AccountNumber) { 
+        $this->AccountNumber = $AccountNumber;
+        return $this;
+    }
 
-    public function getPreferredLanguageCode() { return $this->preferredLanguageCode; }
-    public function setPreferredLanguageCode($preferredLanguageCode) { $this->preferredLanguageCode = $preferredLanguageCode; }
+    /**
+     * Retrieves the account PIN.
+     *
+     * @return string The account PIN.
+     */
+    public function getAccountPin() { 
+        return $this->AccountPin;
+    }
+
+    /**
+     * Sets the account PIN.
+     *
+     * @param string $AccountPin The account PIN to set.
+     * @return $this
+     */
+    public function setAccountPin($AccountPin) { 
+        $this->AccountPin = $AccountPin;
+        return $this;
+    }
+
+    /**
+     * Retrieves the account entity.
+     *
+     * @return string The account entity.
+     */
+    public function getAccountEntity() { 
+        return $this->AccountEntity;
+    }
+
+    /**
+     * Sets the account entity.
+     *
+     * @param string $AccountEntity The account entity to set.
+     * @return $this
+     */
+    public function setAccountEntity($AccountEntity) { 
+        $this->AccountEntity = $AccountEntity;
+        return $this;
+    }
+
+    /**
+     * Retrieves the account country code.
+     *
+     * @return string The account country code.
+     */
+    public function getAccountCountryCode() { 
+        return $this->AccountCountryCode;
+    }
+
+    /**
+     * Sets the account country code.
+     *
+     * @param string $AccountCountryCode The account country code to set.
+     * @return $this
+     */
+    public function setAccountCountryCode($AccountCountryCode) { 
+        $this->AccountCountryCode = $AccountCountryCode;
+        return $this;
+    }
+
+    /**
+     * Retrieves the source.
+     *
+     * @return string The source.
+     */
+    public function getSource() { 
+        return $this->source;
+    }
+
+    /**
+     * Sets the source.
+     *
+     * @param string $Source The source to set.
+     * @return $this
+     */
+    public function setSource($Source) { 
+        $this->source = $Source;
+        return $this;
+    }
+
+    /**
+     * Retrieves the preferred language code.
+     *
+     * @return string The preferred language code.
+     */
+    public function getPreferredLanguageCode() { 
+        return $this->preferredLanguageCode;
+    }
+
+    /**
+     * Sets the preferred language code.
+     *
+     * @param string $PreferredLanguageCode The preferred language code to set.
+     * @return $this
+     */
+    public function setPreferredLanguageCode($PreferredLanguageCode) { 
+        $this->preferredLanguageCode = $PreferredLanguageCode;
+        return $this;
+    }
 }

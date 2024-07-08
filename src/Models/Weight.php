@@ -4,38 +4,50 @@ namespace Aboodma\AramexIntegration\Models;
 
 class Weight
 {
-    public $unit;
-    public $value;
+    public $Unit;
+    public $Value;
 
     /**
-     * @return mixed
+     * Retrieves the unit of weight.
+     *
+     * @return mixed The unit of weight.
      */
     public function getUnit()
     {
-        return $this->unit;
+        return $this->Unit;
     }
 
     /**
-     * @param mixed $unit
+     * Sets the unit of weight.
+     *
+     * @param mixed $unit The unit to set.
+     * @return $this
      */
     public function setUnit($unit)
     {
-        $this->unit = $unit;
+        $this->Unit = $unit;
+        return $this;
     }
 
     /**
-     * @return mixed
+     * Retrieves the value of the weight.
+     *
+     * @return mixed The value of the weight.
      */
     public function getValue()
     {
-        return $this->value;
+        return $this->Value;
     }
 
     /**
-     * @param mixed $value
+     * Sets the value of the weight.
+     *
+     * @param mixed $value The value to set.
+     * @return $this
      */
     public function setValue($value)
     {
-        $this->value = $value;
+        $this->Value = $value;
+        return $this;
     }
 }
