@@ -3,6 +3,17 @@
     "description": "Integration With Aramex Services (Tracking / Shipment / Rate Calculator)",
     "type": "library",
     "version": "1.0.0",
+    "depends": ["base"],
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "require-dev": {
+        "phpunit/phpunit": "^9.5"
+
+    },
+    "scripts": {
+        "test": "phpunit"
+    },
+  
     "autoload": {
         "psr-4": {
             "Aboodma\\AramexIntegration\\": "src/"
