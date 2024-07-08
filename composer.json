@@ -1,6 +1,8 @@
 {
     "name": "aboodma/aramex-integration",
     "description": "Integration With Aramex Services (Tracking / Shipment / Rate Calculator)",
+    "type": "library",
+    "version": "1.0.0",
     "autoload": {
         "psr-4": {
             "Aboodma\\AramexIntegration\\": "src/"
