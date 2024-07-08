@@ -1,90 +1,13 @@
+
 <?php
 
-require 'vendor/autoload.php';
+require_once __DIR__ . '/vendor/autoload.php';
 
-// Create instances of Address, Contact, and Party for Shipper and Consignee
-$shipperAddress = (new \Aboodma\AramexIntegration\Models\Address())
-    ->setLine1("Test Shipper Address Line1")
-    ->setLine2("Test Shipper Address Line2")
-    ->setCity("Dubai")
-    ->setPostCode("000000")
-    ->setCountryCode("AE");
+use Aboodma\AramexIntegration\AramexClient;
+use Aboodma\AramexIntegration\Models\ClientInfo;
 
-$shipperContact = (new \Aboodma\AramexIntegration\Models\Contact())
-    ->setPersonName("Test Shipper Name")
-    ->setCompanyName("Test Shipper Company Name")
-    ->setPhoneNumber1("048707766")
-    ->setCellPhone("971556893100")
-    ->setEmailAddress("test@aramex.com");
 
-$shipper = (new \Aboodma\AramexIntegration\Models\Party())
-    ->setReference1("Shipper Reference")
-    ->setAccountNumber("45796")
-    ->setPartyAddress($shipperAddress)
-    ->setContact($shipperContact);
-
-$consigneeAddress = (new \Aboodma\AramexIntegration\Models\Address())
-    ->setLine1("Test Consignee Address Line1")
-    ->setLine2("Test Consignee Address Line2")
-    ->setLine3("Test Consignee Address Line3")
-    ->setCity("Dubai")
-    ->setStateOrProvinceCode("FU")
-    ->setCountryCode("AE");
-
-$consigneeContact = (new \Aboodma\AramexIntegration\Models\Contact())
-    ->setPersonName("Test Consignee Name")
-    ->setCompanyName("Test Consignee Company Name")
-    ->setPhoneNumber1("048707766")
-    ->setCellPhone("971556893100")
-    ->setEmailAddress("tets@hotmail.com");
-
-$consignee = (new \Aboodma\AramexIntegration\Models\Party())
-    ->setAccountNumber("0")
-    ->setPartyAddress($consigneeAddress)
-    ->setContact($consigneeContact);
-
-$dimensions = (new \Aboodma\AramexIntegration\Models\Dimensions())
-    ->setLength(0)
-    ->setWidth(0)
-    ->setHeight(0)
-    ->setUnit("CM");
-
-$actualWeight = (new \Aboodma\AramexIntegration\Models\Weight())
-    ->setUnit("KG")
-    ->setValue(0.1);
-
-$chargeableWeight = (new \Aboodma\AramexIntegration\Models\Weight())
-    ->setUnit("KG")
-    ->setValue(0);
-
-$amount = (new \Aboodma\AramexIntegration\Models\Amount())
-    ->setCurrencyCode("AED")
-    ->setValue(10);
-
-$details = (new \Aboodma\AramexIntegration\Models\ShipmentDetails())
-    ->setDimensions($dimensions)
-    ->setActualWeight($actualWeight)
-    ->setChargeableWeight($chargeableWeight)
-    ->setDescriptionOfGoods("Items")
-    ->setGoodsOriginCountry("AE")
-    ->setNumberOfPieces(1)
-    ->setProductGroup("DOM")
-    ->setProductType("ONP")
-    ->setPaymentType("P")
-    ->setPaymentOptions("ACCT")
-    ->setCustomsValueAmount($amount);
-
-$shipment = (new \Aboodma\AramexIntegration\Models\Shipment())
-    ->setShipper($shipper)
-    ->setConsignee($consignee)
-    ->setDetails($details)
-    ->setReference1("Shipment Reference");
-
-$labelInfo = (new \Aboodma\AramexIntegration\Models\LabelInfo())
-    ->setReportID(9729)
-    ->setReportType("URL");
-
-$clientInfo = (new \Aboodma\AramexIntegration\Models\ClientInfo())
+$clientInfo = (new ClientInfo())
     ->setUserName("testingapi@aramex.com")
     ->setPassword('R123456789$r')
     ->setVersion("v1.0")
@@ -94,24 +17,4 @@ $clientInfo = (new \Aboodma\AramexIntegration\Models\ClientInfo())
     ->setAccountCountryCode("AE")
     ->setSource(24);
 
-// Initialize AramexClient and make the request
-$config = (new \Aboodma\AramexIntegration\Config())
-    ->setUsername("your_username")
-    ->setPassword("your_password")
-    ->setVersion("v1.0")
-    ->setAccountNumber("your_account_number")
-    ->setAccountPin("your_account_pin")
-    ->setAccountEntity("your_account_entity")
-    ->setAccountCountryCode("your_account_country_code")
-    ->setSource(24);
-
-$client = new \Aboodma\AramexIntegration\AramexClient($config);
-
-try {
-    $response = $client->createShipment($shipment, $labelInfo, $clientInfo);
-    echo json_encode($response, JSON_PRETTY_PRINT);
-} catch (\Aboodma\AramexIntegration\Exceptions\AramexException $e) {
-    echo 'Error: ' . $e->getMessage() . PHP_EOL;
-    echo 'HTTP Status Code: ' . $e->getHttpStatusCode() . PHP_EOL;
-    echo 'Error Details: ' . print_r($e->getErrorDetails(), true);
-}
+$client = new AramexClient($clientInfo);
