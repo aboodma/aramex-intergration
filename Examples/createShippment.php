@@ -2,7 +2,7 @@
 
 use Aboodma\AramexIntegration\Helpers\DateTimeHelper;
 
-require_once __DIR__ . '/vendor/autoload.php';
+require_once __DIR__ . '/../vendor/autoload.php';
 
 // Create instances of Address, Contact, and Party for Shipper and Consignee
 $shipperAddress = (new \Aboodma\AramexIntegration\Models\Address())
@@ -104,7 +104,13 @@ $client = new \Aboodma\AramexIntegration\AramexClient($clientInfo);
 
 try {
     $response = $client->createShipment($shipment, $labelInfo);
-    echo json_encode($response, JSON_PRETTY_PRINT);
+    // $responseBody = $response->getBody()->getContents();
+
+    // Encode the response body to JSON
+    // $encoded = json_encode($responseBody);
+    // $decoded = json_decode($encoded, true);
+    // Decode the JSON and print it as an associative array
+    print_r($response['Shipments'][0]['ShipmentLabel']['LabelURL']);
 } catch (\Aboodma\AramexIntegration\Exceptions\AramexException $e) {
     echo 'Error: ' . $e->getMessage() . PHP_EOL;
     echo 'HTTP Status Code: ' . $e->getHttpStatusCode() . PHP_EOL;

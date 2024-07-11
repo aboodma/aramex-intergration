@@ -1,74 +1,136 @@
 {
-    "Pickup": {
-        "PickupAddress": {
-            "Line1": "Test Consignee Address Line1",
-            "Line2": "Test Consignee Address Line2",
-            "Line3": "Test Consignee Address Line3",
-            "City": "Dubai",
-            "StateOrProvinceCode": "FU",
-            "PostCode": null,
-            "CountryCode": "AE",
-            "longitude": null,
-            "latitude": null,
-            "buildingNumber": null,
-            "buildingName": null,
-            "floor": null,
-            "apartment": null,
-            "poBox": null,
-            "description": null
-        },
-        "PickupContact": {
-            "department": null,
-            "PersonName": "Test Consignee Name",
-            "Title": null,
-            "CompanyName": "Test Consignee Company Name",
-            "PhoneNumber1": "048707766",
-            "phoneNumber1Ext": null,
-            "PhoneNumber2": null,
-            "phoneNumber2Ext": null,
-            "faxNumber": null,
-            "CellPhone": "971556893100",
-            "emailAddress": "tets@hotmail.com",
-            "Type": null
-        },
-        "PickupLocation": "test location",
-        "PickupDate": "\/Date(1720650257000)\/",
-        "ReadyTime": "\/Date(1720650257000)\/",
-        "LastPickupTime": "\/Date(1720650257000)\/",
-        "ClosingTime": "\/Date(1720650257000)\/",
-        "Comments": "test comment",
-        "Reference1": "001",
-        "Reference2": "002",
-        "Vehicle": "test vehicle",
-        "Shipments": "test shipment",
-        "PickupItems": [
-            {
-                "ProductGroup": 1,
-                "ProductType": 1,
-                "NumberOfShipments": "kg",
-                "PackageType": "Food",
-                "Payment": "P",
-                "ShipmentWeight": {
-                    "Unit": "KG",
-                    "Value": 10
+    "Shipments": [
+        {
+            "reference1": "Shipment Reference",
+            "reference2": null,
+            "reference3": null,
+            "Shipper": {
+                "reference1": "Shipper Reference",
+                "reference2": null,
+                "AccountNumber": "45796",
+                "PartyAddress": {
+                    "Line1": "Test Shipper Address Line1",
+                    "Line2": "Test Shipper Address Line2",
+                    "Line3": null,
+                    "City": "Dubai",
+                    "StateOrProvinceCode": null,
+                    "PostCode": "000000",
+                    "CountryCode": "AE",
+                    "longitude": null,
+                    "latitude": null,
+                    "buildingNumber": null,
+                    "buildingName": null,
+                    "floor": null,
+                    "apartment": null,
+                    "poBox": null,
+                    "description": null
                 },
-                "ShipmentVolume": 0.5,
-                "NumberOfPieces": 1,
-                "CashAmount": 0.5,
-                "ExtraCharges": 0.5,
-                "ShipmentDimensions": {
+                "Contact": {
+                    "department": null,
+                    "PersonName": "Test Shipper Name",
+                    "Title": null,
+                    "CompanyName": "Test Shipper Company Name",
+                    "PhoneNumber1": "048707766",
+                    "phoneNumber1Ext": null,
+                    "PhoneNumber2": null,
+                    "phoneNumber2Ext": null,
+                    "faxNumber": null,
+                    "CellPhone": "971556893100",
+                    "emailAddress": "test@aramex.com",
+                    "Type": null
+                }
+            },
+            "Consignee": {
+                "reference1": null,
+                "reference2": null,
+                "AccountNumber": "0",
+                "PartyAddress": {
+                    "Line1": "Test Consignee Address Line1",
+                    "Line2": "Test Consignee Address Line2",
+                    "Line3": "Test Consignee Address Line3",
+                    "City": "Dubai",
+                    "StateOrProvinceCode": "FU",
+                    "PostCode": null,
+                    "CountryCode": "AE",
+                    "longitude": null,
+                    "latitude": null,
+                    "buildingNumber": null,
+                    "buildingName": null,
+                    "floor": null,
+                    "apartment": null,
+                    "poBox": null,
+                    "description": null
+                },
+                "Contact": {
+                    "department": null,
+                    "PersonName": "Test Consignee Name",
+                    "Title": null,
+                    "CompanyName": "Test Consignee Company Name",
+                    "PhoneNumber1": "048707766",
+                    "phoneNumber1Ext": null,
+                    "PhoneNumber2": null,
+                    "phoneNumber2Ext": null,
+                    "faxNumber": null,
+                    "CellPhone": "971556893100",
+                    "emailAddress": "tets@hotmail.com",
+                    "Type": null
+                }
+            },
+            "thirdParty": null,
+            "ShippingDateTime": "\/Date(1720884126000)\/",
+            "dueDate": null,
+            "comments": null,
+            "pickupLocation": null,
+            "operationsInstructions": null,
+            "accountingInstructions": null,
+            "Details": {
+                "Dimensions": {
                     "Length": 0,
                     "Width": 0,
                     "Height": 0,
                     "Unit": "CM"
                 },
-                "Comments": "Airway Bill Number:44097846262"
-            }
-        ],
-        "Status": "Ready",
-        "ExistingShipments": "test existing shipment",
-        "Branch": "test branch",
-        "RouteCode": "test route code"
+                "ActualWeight": {
+                    "Unit": "KG",
+                    "Value": 0.1
+                },
+                "ChargeableWeight": {
+                    "Unit": "KG",
+                    "Value": 0
+                },
+                "DescriptionOfGoods": "Items",
+                "GoodsOriginCountry": "AE",
+                "NumberOfPieces": 1,
+                "ProductGroup": "DOM",
+                "ProductType": "ONP",
+                "PaymentType": "P",
+                "PaymentOptions": "ACCT",
+                "customsValueAmount": {
+                    "value": 10,
+                    "currencyCode": "AED"
+                },
+                "cashOnDeliveryAmount": null,
+                "insuranceAmount": null,
+                "cashAdditionalAmount": null,
+                "cashAdditionalAmountDescription": null,
+                "collectAmount": null,
+                "services": null,
+                "items": null,
+                "deliveryInstructions": null,
+                "additionalProperties": null,
+                "containsDangerousGoods": null
+            },
+            "attachments": null,
+            "foreignHAWB": null,
+            "transportType": null,
+            "pickupGUID": null,
+            "number": null,
+            "scheduledDelivery": null
+        }
+    ],
+    "LabelInfo": {
+        "ReportID": 9729,
+        "ReportType": "URL"
     },
     "ClientInfo": {
         "UserName": "testingapi@aramex.com",
@@ -81,7 +143,5 @@
         "source": 24,
         "preferredLanguageCode": null
     },
-    "Transaction": {
-        "Reference1": ""
-    }
+    "Transaction": null
 }
