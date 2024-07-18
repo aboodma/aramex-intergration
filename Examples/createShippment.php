@@ -5,23 +5,23 @@ use Aboodma\AramexIntegration\Helpers\DateTimeHelper;
 require_once __DIR__ . '/../vendor/autoload.php';
 
 // Create instances of Address, Contact, and Party for Shipper and Consignee
-$shipperAddress = (new \Aboodma\AramexIntegration\Models\Address())
-    ->setLine1("Test Shipper Address Line1")
-    ->setLine2("Test Shipper Address Line2")
-    ->setCity("Dubai")
-    ->setPostCode("000000")
-    ->setCountryCode("AE");
+        $shipperAddress = (new \Aboodma\AramexIntegration\Models\Address())
+            ->setLine1("Test Shipper Address Line1")
+            ->setLine2("Test Shipper Address Line2")
+            ->setCity("Dubai")
+            ->setPostCode("000000")
+            ->setCountryCode("AE");
 
-$shipperContact = (new \Aboodma\AramexIntegration\Models\Contact())
-    ->setPersonName("Test Shipper Name")
-    ->setCompanyName("Test Shipper Company Name")
-    ->setPhoneNumber1("048707766")
-    ->setCellPhone("971556893100")
-    ->setEmailAddress("test@aramex.com");
+    $shipperContact = (new \Aboodma\AramexIntegration\Models\Contact())
+        ->setPersonName("Test Shipper Name")
+        ->setCompanyName("Test Shipper Company Name")
+        ->setPhoneNumber1("048707766")
+        ->setCellPhone("971556893100")
+        ->setEmailAddress("test@aramex.com");
 
-$shipper = (new \Aboodma\AramexIntegration\Models\Party())
-    ->setReference1("Shipper Reference")
-    ->setAccountNumber("45796")
+    $shipper = (new \Aboodma\AramexIntegration\Models\Party())
+        ->setReference1("Shipper Reference")
+        ->setAccountNumber("45796")
     ->setPartyAddress($shipperAddress)
     ->setContact($shipperContact);
 
