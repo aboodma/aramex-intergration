@@ -62,17 +62,10 @@ class AramexClient
                 ]
             ]);
 
-            $responseBody = $response->getBody()->getContents();
+            // Log the response payload
+            file_put_contents('response_payload.log', $response->getBody()->getContents());
 
-            // Decode the JSON response body directly
-            $decodedResponse = json_decode($responseBody, true);
-
-           
-
-            // Optionally, log the decoded response for debugging
-            file_put_contents('response_payload.log', print_r($decodedResponse, true));
-
-            return $decodedResponse;
+            return json_decode($response->getBody()->getContents(), true);
         } catch (RequestException $e) {
             $statusCode = $e->getResponse() ? $e->getResponse()->getStatusCode() : 0;
             $errorDetails = $e->getResponse() ? $e->getResponse()->getBody()->getContents() : '';
