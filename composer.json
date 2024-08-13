@@ -2,7 +2,7 @@
   "name": "aboodma/aramex-integration",
   "description": "Integration With Aramex Services (Tracking / Shipment / Rate Calculator)",
   "type": "library",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "depends": [
     "base"
   ],
