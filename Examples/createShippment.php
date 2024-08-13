@@ -2,26 +2,26 @@
 
 use Aboodma\AramexIntegration\Helpers\DateTimeHelper;
 
-require_once __DIR__ . '/../vendor/autoload.php';
+require_once __DIR__ . '/vendor/autoload.php';
 
 // Create instances of Address, Contact, and Party for Shipper and Consignee
-        $shipperAddress = (new \Aboodma\AramexIntegration\Models\Address())
-            ->setLine1("Test Shipper Address Line1")
-            ->setLine2("Test Shipper Address Line2")
-            ->setCity("Dubai")
-            ->setPostCode("000000")
-            ->setCountryCode("AE");
+$shipperAddress = (new \Aboodma\AramexIntegration\Models\Address())
+    ->setLine1("Test Shipper Address Line1")
+    ->setLine2("Test Shipper Address Line2")
+    ->setCity("Dubai")
+    ->setPostCode("000000")
+    ->setCountryCode("AE");
 
-    $shipperContact = (new \Aboodma\AramexIntegration\Models\Contact())
-        ->setPersonName("Test Shipper Name")
-        ->setCompanyName("Test Shipper Company Name")
-        ->setPhoneNumber1("048707766")
-        ->setCellPhone("971556893100")
-        ->setEmailAddress("test@aramex.com");
+$shipperContact = (new \Aboodma\AramexIntegration\Models\Contact())
+    ->setPersonName("Test Shipper Name")
+    ->setCompanyName("Test Shipper Company Name")
+    ->setPhoneNumber1("048707766")
+    ->setCellPhone("971556893100")
+    ->setEmailAddress("test@aramex.com");
 
-    $shipper = (new \Aboodma\AramexIntegration\Models\Party())
-        ->setReference1("Shipper Reference")
-        ->setAccountNumber("45796")
+$shipper = (new \Aboodma\AramexIntegration\Models\Party())
+    ->setReference1("Shipper Reference")
+    ->setAccountNumber("45796")
     ->setPartyAddress($shipperAddress)
     ->setContact($shipperContact);
 
@@ -104,13 +104,7 @@ $client = new \Aboodma\AramexIntegration\AramexClient($clientInfo);
 
 try {
     $response = $client->createShipment($shipment, $labelInfo);
-    // $responseBody = $response->getBody()->getContents();
-
-    // Encode the response body to JSON
-    // $encoded = json_encode($responseBody);
-    // $decoded = json_decode($encoded, true);
-    // Decode the JSON and print it as an associative array
-    print_r($response['Shipments'][0]['ShipmentLabel']['LabelURL']);
+    echo json_encode($response, JSON_PRETTY_PRINT);
 } catch (\Aboodma\AramexIntegration\Exceptions\AramexException $e) {
     echo 'Error: ' . $e->getMessage() . PHP_EOL;
     echo 'HTTP Status Code: ' . $e->getHttpStatusCode() . PHP_EOL;

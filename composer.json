@@ -1,32 +1,32 @@
 {
-    "name": "aboodma/aramex-integration",
-    "description": "Integration With Aramex Services (Tracking / Shipment / Rate Calculator)",
-    "type": "library",
-    "version": "1.0.0",
-    "depends": ["base"],
-    "minimum-stability": "stable",
-    "prefer-stable": true,
-    "require-dev": {
-        "phpunit/phpunit": "^9.5"
-
-    },
-    "scripts": {
-        "test": "phpunit"
-    },
-  
-    "autoload": {
-        "psr-4": {
-            "Aboodma\\AramexIntegration\\": "src/"
-        }
-    },
-    "authors": [
-        {
-            "name": "Abdulrahman Mardinli",
-            "email": "34406204+aboodma@users.noreply.github.com"
-        }
-    ],
-    "require": {
-        "guzzlehttp/guzzle": "^7.8"
-    },
-    "license": "MIT"
+  "name": "aboodma/aramex-integration",
+  "description": "Integration With Aramex Services (Tracking / Shipment / Rate Calculator)",
+  "type": "library",
+  "version": "1.0.1",
+  "depends": [
+    "base"
+  ],
+  "minimum-stability": "stable",
+  "prefer-stable": true,
+  "require-dev": {
+    "phpunit/phpunit": "^9.5"
+  },
+  "scripts": {
+    "test": "phpunit"
+  },
+  "autoload": {
+    "psr-4": {
+      "Aboodma\\AramexIntegration\\": "src/"
+    }
+  },
+  "authors": [
+    {
+      "name": "Abdulrahman Mardinli",
+      "email": "34406204+aboodma@users.noreply.github.com"
+    }
+  ],
+  "require": {
+    "guzzlehttp/guzzle": "^7.8"
+  },
+  "license": "MIT"
 }
