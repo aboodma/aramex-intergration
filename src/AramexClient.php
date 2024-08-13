@@ -39,12 +39,12 @@ class AramexClient
      * @return array The response from the Aramex API.
      * @throws AramexException if there is an error during the request.
      */
-    public function createShipment(Shipment $shipment, LabelInfo $labelInfo)
+    public function createShipment(Array $shipment, LabelInfo $labelInfo)
     {
         
 
         $data = [
-            'Shipments' => [$shipment],
+            'Shipments' => $shipment,
             'LabelInfo' => $labelInfo,
             'ClientInfo' => $this->clientInfo,
             'Transaction' => null
@@ -62,17 +62,10 @@ class AramexClient
                 ]
             ]);
 
-            $responseBody = $response->getBody()->getContents();
-
-            // Decode the JSON response body directly
-            $decodedResponse = json_decode($responseBody, true);
-
-           
-
-            // Optionally, log the decoded response for debugging
-            file_put_contents('response_payload.log', print_r($decodedResponse, true));
-
-            return $decodedResponse;
+            // Log the response payload
+            $result = $response->getBody()->getContents();
+            file_put_contents('response_payload.log', $result);
+            return json_decode($result  );
         } catch (RequestException $e) {
             $statusCode = $e->getResponse() ? $e->getResponse()->getStatusCode() : 0;
             $errorDetails = $e->getResponse() ? $e->getResponse()->getBody()->getContents() : '';
@@ -91,7 +84,11 @@ class AramexClient
             'Pickup' => $pickup,
             'ClientInfo' => $this->clientInfo,
             'Transaction' => [
-                'Reference1' =>''
+                'Reference1' =>'',
+                'Reference2' =>'',
+                'Reference3' =>'',
+                'Reference4' =>'',
+                'Reference5' =>'',
             ],
         ];
 
@@ -99,7 +96,7 @@ class AramexClient
         file_put_contents('request_payload.log', json_encode($data, JSON_PRETTY_PRINT));
 
         try {
-            $response = $this->client->post('https://ws.dev.aramex.net/ShippingAPI.V2/Shipping/Service_1_0.svc/json/CreatePickup', [
+            $response = $this->client->post('https://ws.sbx.aramex.net/ShippingAPI.V2/Shipping/Service_1_0.svc/json/CreatePickup', [
                 'body' => json_encode($data),
                 'headers' => [
                     'Content-Type' => 'application/json',
@@ -108,9 +105,9 @@ class AramexClient
             ]);
 
             // Log the response payload
-            file_put_contents('response_payload.log', $response->getBody()->getContents());
-
-            return json_decode($response->getBody()->getContents(), true);
+            $result = $response->getBody()->getContents();
+            file_put_contents('response_payload.log', $result);
+            return json_decode($result  );
         }catch (RequestException $e) {
             $statusCode = $e->getResponse() ? $e->getResponse()->getStatusCode() : 0;
             $errorDetails = $e->getResponse() ? $e->getResponse()->getBody()->getContents() : '';

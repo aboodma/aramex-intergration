@@ -11,15 +11,22 @@ class DateTimeHelper
      */
     public static function calculateTimestamps()
     {
-       
-        $current_time = new \DateTime();
+        // Set the timezone to Istanbul
+        $timezone = new \DateTimeZone('Europe/Istanbul');
+        $current_time = new \DateTime('now', $timezone);
+        
+        // Modify the time by adding 2 days
         $current_time->modify('+2 days');
+        
+        // Get the current timestamp in milliseconds
         $current_timestamp = $current_time->getTimestamp() * 1000; 
-
-        $ready_time = $current_timestamp + (1 * 3600 * 1000); 
-        $last_pickup_time = $current_timestamp + (2 * 3600 * 1000); 
-        $closing_time = $current_timestamp + (3 * 3600 * 1000); 
-
+    
+        // Calculate the ready, last pickup, and closing times
+        $ready_time = $current_timestamp + (4 * 3600 * 1000); // 5 hours later
+        $last_pickup_time = $current_timestamp + (5 * 3600 * 1000); // 6 hours later
+        $closing_time = $current_timestamp + (6 * 3600 * 1000); // 8 hours later
+    
+        // Return the calculated timestamps
         return [
             'current_timestamp' => $current_timestamp,
             'ready_time' => $ready_time,
@@ -27,4 +34,5 @@ class DateTimeHelper
             'closing_time' => $closing_time
         ];
     }
+    
 }
